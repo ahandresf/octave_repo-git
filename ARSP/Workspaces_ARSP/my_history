@@ -1,0 +1,1001 @@
+  if only_real
+    b=0;
+  else
+    if rand>0.5
+      b=1i;
+    else
+      b=-1i;
+    endif
+  endif
+  Ij=a+b;
+  j=j+1;
+  I=[Ij;I(1:length(I)-1)];
+  testIj(j)=Ij;
+##Filter adaptation
+  ye=(conj(wn))'*I(1:L); #estimated output 
+  testye(j)=ye; #just for testing
+  y=(conj(xn))'*I(1:C);  #real output
+  testy(j)=y;
+  e(j+n-1)=y-ye;   #error in this iteration
+  wn=wn+conj(e(j+n-1))*I./(norm(I)^2); #adapting the filter
+  err_energy=(1/n)*dot(e(length(e)-n+1:length(e)),e(length(e)-n+1:length(e)));#calculating the error energy in n samples
+  #err_energy=e(length(e)-n:length(e))'*e(length(e)-n:length(e));#calculating the error energy in n samples
+  #err_energy=(1/n)*err_energy;
+##Input generator: This just generate random binary numbers imaginary, eg. 1+j or -1-j
+  if rand>0.5
+    a=1;
+  else
+    a=-1;
+  endif
+  if only_real
+    b=0;
+  else
+    if rand>0.5
+      b=1i;
+    else
+      b=-1i;
+    endif
+  endif
+  Ij=a+b;
+  j=j+1;
+  I=[Ij;I(1:length(I)-1)];
+  testIj(j)=Ij;
+##Filter adaptation
+  ye=(conj(wn))'*I(1:L); #estimated output 
+  testye(j)=ye; #just for testing
+  y=(conj(xn))'*I(1:C);  #real output
+  testy(j)=y;
+  e(j+n-1)=y-ye;   #error in this iteration
+  wn=wn+conj(e(j+n-1))*I./(norm(I)^2); #adapting the filter
+  err_energy=(1/n)*dot(e(length(e)-n+1:length(e)),e(length(e)-n+1:length(e)));#calculating the error energy in n samples
+  #err_energy=e(length(e)-n:length(e))'*e(length(e)-n:length(e));#calculating the error energy in n samples
+  #err_energy=(1/n)*err_energy;
+##Input generator: This just generate random binary numbers imaginary, eg. 1+j or -1-j
+  if rand>0.5
+    a=1;
+  else
+    a=-1;
+  endif
+  if only_real
+    b=0;
+  else
+    if rand>0.5
+      b=1i;
+    else
+      b=-1i;
+    endif
+  endif
+  Ij=a+b;
+  j=j+1;
+  I=[Ij;I(1:length(I)-1)];
+  testIj(j)=Ij;
+##Filter adaptation
+  ye=(conj(wn))'*I(1:L); #estimated output 
+  testye(j)=ye; #just for testing
+  y=(conj(xn))'*I(1:C);  #real output
+  testy(j)=y;
+  e(j+n-1)=y-ye;   #error in this iteration
+  wn=wn+conj(e(j+n-1))*I./(norm(I)^2); #adapting the filter
+  err_energy=(1/n)*dot(e(length(e)-n+1:length(e)),e(length(e)-n+1:length(e)));#calculating the error energy in n samples
+  #err_energy=e(length(e)-n:length(e))'*e(length(e)-n:length(e));#calculating the error energy in n samples
+  #err_energy=(1/n)*err_energy;
+##Input generator: This just generate random binary numbers imaginary, eg. 1+j or -1-j
+  if rand>0.5
+    a=1;
+  else
+    a=-1;
+  endif
+  if only_real
+    b=0;
+  else
+    if rand>0.5
+      b=1i;
+    else
+      b=-1i;
+    endif
+  endif
+  Ij=a+b;
+  j=j+1;
+  I=[Ij;I(1:length(I)-1)];
+  testIj(j)=Ij;
+##Filter adaptation
+  ye=(conj(wn))'*I(1:L); #estimated output 
+  testye(j)=ye; #just for testing
+  y=(conj(xn))'*I(1:C);  #real output
+  testy(j)=y;
+  e(j+n-1)=y-ye;   #error in this iteration
+  wn=wn+conj(e(j+n-1))*I./(norm(I)^2); #adapting the filter
+  err_energy=(1/n)*dot(e(length(e)-n+1:length(e)),e(length(e)-n+1:length(e)));#calculating the error energy in n samples
+  #err_energy=e(length(e)-n:length(e))'*e(length(e)-n:length(e));#calculating the error energy in n samples
+  #err_energy=(1/n)*err_energy;
+##Input generator: This just generate random binary numbers imaginary, eg. 1+j or -1-j
+  if rand>0.5
+    a=1;
+  else
+    a=-1;
+  endif
+  if only_real
+    b=0;
+  else
+    if rand>0.5
+      b=1i;
+    else
+      b=-1i;
+    endif
+  endif
+  Ij=a+b;
+  j=j+1;
+  I=[Ij;I(1:length(I)-1)];
+  testIj(j)=Ij;
+##Filter adaptation
+  ye=(conj(wn))'*I(1:L); #estimated output 
+  testye(j)=ye; #just for testing
+  y=(conj(xn))'*I(1:C);  #real output
+  testy(j)=y;
+  e(j+n-1)=y-ye;   #error in this iteration
+  wn=wn+conj(e(j+n-1))*I./(norm(I)^2); #adapting the filter
+  err_energy=(1/n)*dot(e(length(e)-n+1:length(e)),e(length(e)-n+1:length(e)));#calculating the error energy in n samples
+  #err_energy=e(length(e)-n:length(e))'*e(length(e)-n:length(e));#calculating the error energy in n samples
+  #err_energy=(1/n)*err_energy;
+##Input generator: This just generate random binary numbers imaginary, eg. 1+j or -1-j
+  if rand>0.5
+    a=1;
+  else
+    a=-1;
+  endif
+  if only_real
+    b=0;
+  else
+    if rand>0.5
+      b=1i;
+    else
+      b=-1i;
+    endif
+  endif
+  Ij=a+b;
+  j=j+1;
+  I=[Ij;I(1:length(I)-1)];
+  testIj(j)=Ij;
+##Filter adaptation
+  ye=(conj(wn))'*I(1:L); #estimated output 
+  testye(j)=ye; #just for testing
+  y=(conj(xn))'*I(1:C);  #real output
+  testy(j)=y;
+  e(j+n-1)=y-ye;   #error in this iteration
+  wn=wn+conj(e(j+n-1))*I./(norm(I)^2); #adapting the filter
+  err_energy=(1/n)*dot(e(length(e)-n+1:length(e)),e(length(e)-n+1:length(e)));#calculating the error energy in n samples
+  #err_energy=e(length(e)-n:length(e))'*e(length(e)-n:length(e));#calculating the error energy in n samples
+  #err_energy=(1/n)*err_energy;
+j
+plot(e)
+plot(abs(e))
+w
+wn
+xn
+plot(testy)
+HW_11_imag
+xn
+HW_11_imag
+HW_11_imag
+HW_11_imag
+HW_11_imag
+HW_11_imag
+e(j+n-1)
+I
+dot(w,I)
+dot(wn,I)
+conj(wn)'*I
+(conj(wn))'*I(1:L)
+(conj(wn))'*I(1:L)
+wn
+wn'
+conj(wn)'
+conj(wn)'*I(1:L)
+dot(conj(wn),I(1:L))
+inv(ones(2))
+ones(2)
+inv(eye(2))
+inv(eye(2))
+ctrb
+pkg load control
+ctrb(A,B)
+###
+#Homework II Control System II 480/580
+#TA Solution Felipe Alba
+#Excersice III
+clc
+close all
+clear all
+pkg load control
+A=[1 1 0;0 1 1;-5 -4 -3];
+B=[0 1 1]';
+C=[5 3 1];
+ctrb(A,B)
+###
+#Homework II Control System II 480/580
+#TA Solution Felipe Alba
+#Excersice III
+clc
+close all
+clear all
+pkg load control
+A=[1 1 0;0 1 1;-5 -4 -3];
+B=[0 1 1]';
+C=[5 3 1];
+T=ctrb(A,B)
+Ti=inv(T)
+###
+#Homework II Control System II 480/580
+#TA Solution Felipe Alba
+#Excersice III
+clc
+close all
+clear all
+pkg load control
+A=[1 1 0;0 1 1;-5 -4 -3];
+B=[0 1 1]';
+C=[5 3 1];
+#a) Find the controllability matrix
+P=ctrb(A,B)
+#b) Asset the controllability of the system
+r=rank(P)
+c) Find the polinomios
+poly(P)
+help poly
+M=[0 1;-10 -2]
+poly(M)
+inv(P)
+p=poly(A) #a3=1.0000 a2=-10.0000 a1=-23.0000 a0=40.0000
+poly(M)
+###
+#Homework II Control System II 480/580
+#TA Solution Felipe Alba
+#Excersice III
+clc
+close all
+clear all
+pkg load control
+A=[1 1 0;0 1 1;-5 -4 -3];
+B=[0 1 1]';
+C=[5 3 1];
+#a) Find the controllability matrix
+P=ctrb(A,B)
+#b) Asset the controllability of the system
+r=rank(P) #the matrix is controllable because the result was 3
+#c) Find the polinomios
+p=poly(A) #a3=1 a2=1 a1=-1 a0=4 from sI-A matrix
+Pinv=[-1 1 1;1 1 0;1 0 0] #Canonical form using the coefficients 
+#d) Now using P and Pinv we find the Transformation matrix
+T=P*Pinv;
+Ti=inv(T)
+Accf=Ti*A*T
+Bccf=Ti*B
+Cccf=C*T
+D=0
+###
+#Homework II Control System II 480/580
+#TA Solution Felipe Alba
+#Excersice III
+clc
+close all
+clear all
+pkg load control
+A=[1 1 0;0 1 1;-5 -4 -3];
+B=[0 1 1]';
+C=[5 3 1];
+#a) Find the controllability matrix
+P=ctrb(A,B)
+#b) Asset the controllability of the system
+r=rank(P) #the matrix is controllable because the result was 3
+#c) Find the polinomios
+p=poly(A) #a3=1 a2=1 a1=-1 a0=4 from sI-A matrix
+Pinv=[-1 1 1;1 1 0;1 0 0] #Canonical form using the coefficients 
+#d) Now using P and Pinv we find the Transformation matrix
+T=P*Pinv
+Ti=inv(T)
+Accf=Ti*A*T
+Bccf=Ti*B
+Cccf=C*T
+D=0
+clear all
+clc
+HW2_CSII
+exit
+# Octave 4.0.0, Sun Mar 04 23:05:13 2018 CST <leasanspy@leasanspy-Inspiron-5521>
+###
+#Homework II Control System II 480/580
+#TA Solution Felipe Alba
+#Excersice III
+clc
+close all
+clear all
+pkg load control
+A=[1 1 0;0 1 1;-5 -4 -3];
+B=[0 1 1]';
+C=[5 3 1];
+#a) Find the controllability matrix
+P=ctrb(A,B)
+#b) Asset the controllability of the system
+r=rank(P) #the matrix is controllable because the result was 3
+#c) Find the polinomios
+p=poly(A) #a3=1 a2=1 a1=-1 a0=4 from sI-A matrix
+Pinv=[-1 1 1;1 1 0;1 0 0] #Canonical form using the coefficients 
+#d) Now using P and Pinv we find the Transformation matrix
+T=P*Pinv
+Ti=inv(T)
+Accf=Ti*A*T
+Bccf=Ti*B
+Cccf=C*T
+D=0
+exit
+# Octave 4.0.0, Mon Mar 05 11:01:37 2018 CST <leasanspy@leasanspy-Inspiron-5521>
+HW_11_imag
+plot(e)
+plot(abs(e))
+HW_11_imag
+HW_11_imag
+HW_11_imag
+HW_11_imag
+m=[1+i; 2+3i]
+m'
+exit
+# Octave 4.0.0, Tue Mar 06 09:34:26 2018 CST <leasanspy@leasanspy-Inspiron-5521>
+sin(pi)
+exit
+# Octave 4.0.0, Tue Mar 06 18:10:26 2018 CST <leasanspy@leasanspy-Inspiron-5521>
+# Octave 4.0.0, Fri Mar 09 10:04:44 2018 CST <leasanspy@leasanspy-Inspiron-5521>
+# Octave 4.0.0, Thu Mar 15 12:43:27 2018 CDT <leasanspy@leasanspy-Inspiron-5521>
+tf
+#Andres Felipe Alba Hernandez
+clc
+clear all
+close all
+#loading libraries 
+pkg load control
+pkg load signal
+#Loading the Data
+load TF.mat; #loas P_p, P_z,S_p,S_z Functions
+n_ref1=importdata('SEC13R.mat');
+n_ref2=importdata('SEC18R.mat');
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+load TF.mat; #loas P_p, P_z,S_p,S_z Functions
+S_sys=tf(S_z,S_p);
+S_sys 
+#Andres Felipe Alba Hernandez
+clc
+clear all
+close all
+#loading libraries 
+pkg load control
+pkg load signal
+#Loading the Data
+load TF.mat; #loas P_p, P_z,S_p,S_z Functions
+n_ref1=importdata('SEC13R.mat');
+n_ref2=importdata('SEC18R.mat');
+###Data loaded is:
+#S=S_z/S_p
+#S_z Coefficient of the numerator
+#S_p Coefficient of the denominator
+#P=P_z/P_p
+#P_z Coefficient of the numerator
+#P_p Coefficient of the denominator
+#Lets estimate S offline LMS
+i=1
+err_ye=2^16;
+abs_err=err_ye
+u=0.1;
+L=length(Sp);
+iter_filt=L*50;
+w=zeros(L,1);
+max_num_iterations=2000;
+epsilon_err=1e-6;
+x=(0.5-rand(L*iter_filt,1)); #the vector of inputs white noise 
+#x=randn(200,1); #gaussian noise
+y=filter(S_z,S_p,x);
+#Andres Felipe Alba Hernandez
+clc
+clear all
+close all
+#loading libraries 
+pkg load control
+pkg load signal
+#Loading the Data
+load TF.mat; #loas P_p, P_z,S_p,S_z Functions
+n_ref1=importdata('SEC13R.mat');
+n_ref2=importdata('SEC18R.mat');
+###Data loaded is:
+#S=S_z/S_p
+#S_z Coefficient of the numerator
+#S_p Coefficient of the denominator
+#P=P_z/P_p
+#P_z Coefficient of the numerator
+#P_p Coefficient of the denominator
+#Lets estimate S offline LMS
+i=1
+err_ye=2^16;
+abs_err=err_ye
+u=0.1;
+L=length(S_z);
+iter_filt=L*50;
+w=zeros(L,1);
+max_num_iterations=2000;
+epsilon_err=1e-6;
+x=(0.5-rand(L*iter_filt,1)); #the vector of inputs white noise 
+#x=randn(200,1); #gaussian noise
+y=filter(S_z,S_p,x);
+L
+iter_filt 
+test=L*iter_filt
+L*50
+#Andres Felipe Alba Hernandez
+clc
+clear all
+close all
+#loading libraries 
+pkg load control
+pkg load signal
+#Loading the Data
+load TF.mat; #loas P_p, P_z,S_p,S_z Functions
+n_ref1=importdata('SEC13R.mat');
+n_ref2=importdata('SEC18R.mat');
+###Data loaded is:
+#S=S_z/S_p
+#S_z Coefficient of the numerator
+#S_p Coefficient of the denominator
+#P=P_z/P_p
+#P_z Coefficient of the numerator
+#P_p Coefficient of the denominator
+#Lets estimate S offline LMS
+i=1
+err_ye=2^16;
+abs_err=err_ye
+u=0.1;
+L=length(S_z);
+iter_filt=L*50;
+w=zeros(L,1);
+max_num_iterations=2000;
+epsilon_err=1e-6;
+x=(0.5-rand(iter_filt,1)); #the vector of inputs white noise 
+#x=randn(200,1); #gaussian noise
+y=filter(S_z,S_p,x);
+plot(y)
+hist(x)
+#Andres Felipe Alba Hernandez
+clc
+clear all
+close all
+#loading libraries 
+pkg load control
+pkg load signal
+#Loading the Data
+load TF.mat; #loas P_p, P_z,S_p,S_z Functions
+n_ref1=importdata('SEC13R.mat');
+n_ref2=importdata('SEC18R.mat');
+###Data loaded is:
+#S=S_z/S_p
+#S_z Coefficient of the numerator
+#S_p Coefficient of the denominator
+#P=P_z/P_p
+#P_z Coefficient of the numerator
+#P_p Coefficient of the denominator
+#Lets estimate S offline LMS
+i=1
+err_ye=2^16;
+abs_err=err_ye
+u=0.1;
+L=length(S_z);
+iter_filt=L*50;
+w=zeros(L,1);
+max_num_iterations=2000;
+epsilon_err=1e-6;
+x=(0.5-rand(iter_filt,1)); #the vector of inputs white noise 
+#x=randn(200,1); #gaussian noise
+y=filter(S_z,S_p,x);
+n=25;
+e(1:n)=1;
+while(err_energy>epsilon_err && i!=max_num_iterations)
+#while(abs_err>epsilon_err)
+  ye=w'*x(1:L); #Lets get the estimated value
+  #test(i)=y
+  #test_e(i)=ye;
+  err_ye(i)=y(i)-ye;
+  abs_err=abs(err_ye(i));
+  w=w+u*x(1+i-1:L+i-1)*err_ye(i); #update w 
+  i=i+1;
+  #x=[(0.5-rand);x(1:length(x)-1)]; #For gaussian noise
+  #x=[randn;x(1:length(x)-1)]; # For gaussian noise
+  err_energy=(1/n)*dot(e(length(e)-n+1:length(e)),e(length(e)-n+1:length(e)));
+endwhile
+MidTerm659FelipeAlba
+#Andres Felipe Alba Hernandez
+clc
+clear all
+close all
+#loading libraries 
+pkg load control
+pkg load signal
+#Loading the Data
+load TF.mat; #loas P_p, P_z,S_p,S_z Functions
+n_ref1=importdata('SEC13R.mat');
+n_ref2=importdata('SEC18R.mat');
+###Data loaded is:
+#S=S_z/S_p
+#S_z Coefficient of the numerator
+#S_p Coefficient of the denominator
+#P=P_z/P_p
+#P_z Coefficient of the numerator
+#P_p Coefficient of the denominator
+#Lets estimate S offline LMS
+i=1
+err_ye=2^16;
+abs_err=err_ye
+u=0.1;
+L=length(S_z);
+iter_filt=L*50;
+w=zeros(L,1);
+max_num_iterations=2000;
+epsilon_err=1e-6;
+x=(0.5-rand(iter_filt,1)); #the vector of inputs white noise 
+#x=randn(200,1); #gaussian noise
+y=filter(S_z,S_p,x);
+n=25;
+e(1:n)=1;
+err_energy=(1/n)*dot(e(1:length(e)),e(1:length(e)))
+#while(abs_err>epsilon_err)
+  ye=w'*x(1:L); #Lets get the estimated value
+  #test(i)=y
+  #test_e(i)=ye;
+  err_ye(i)=y(i)-ye;
+  abs_err=abs(err_ye(i));
+  w=w+u*x(1+i-1:L+i-1)*err_ye(i); #update w 
+  i=i+1;
+  #x=[(0.5-rand);x(1:length(x)-1)]; #For gaussian noise
+  #x=[randn;x(1:length(x)-1)]; # For gaussian noise
+  err_energy=(1/n)*dot(e(length(e)-n+1:length(e)),e(length(e)-n+1:length(e)));
+MidTerm659FelipeAlba
+i
+length(x)
+length(x)+n
+length(err_ye)
+max_num_iterations 
+max_num_iterations-n
+MidTerm659FelipeAlba
+1+i-1:L+i-1
+L+i-1
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+clear all
+clc
+MidTerm659FelipeAlba
+1+i-1:L+i-1
+MidTerm659FelipeAlba
+plot(w)
+plot(e)
+MidTerm659FelipeAlba
+plot(error_ye)
+plot(err_ye)
+plot(y)
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+#Andres Felipe Alba Hernandez
+clc
+clear all
+close all
+#loading libraries 
+pkg load control
+pkg load signal
+#Loading the Data
+load TF.mat; #loas P_p, P_z,S_p,S_z Functions
+n_ref1=importdata('SEC13R.mat');
+n_ref2=importdata('SEC18R.mat');
+###Data loaded is:
+#S=S_z/S_p
+#S_z Coefficient of the numerator
+#S_p Coefficient of the denominator
+#P=P_z/P_p
+#P_z Coefficient of the numerator
+#P_p Coefficient of the denominator
+#Lets estimate S offline LMS
+i=1
+err_ye=2^16;
+abs_err=err_ye
+u=0.1;
+L=length(S_z);
+iter_filt=L*50;
+w_s=zeros(L,1);
+max_num_iterations=iter_filt-L+1;
+epsilon_err=1e-6;
+x=(0.5-rand(iter_filt,1)); #the vector of inputs white noise 
+#x=randn(200,1); #gaussian noise
+y=filter(S_z,S_p,x);
+n=25;
+err_ye(1:n)=1;
+err_energy=(1/n)*dot(e(1:length(e)),e(1:length(e)))
+#while(abs_err>epsilon_err)
+  ye=w_s'*x(1:L); #Lets get the estimated value
+  #test(i)=y
+  #test_e(i)=ye;
+  err_ye(j+n-1)=y(i)-ye;
+  w_s=w_s+u*x(1+i-1:L+i-1)*err_ye(j+n-1); #update w 
+  i=i+1;
+  #x=[(0.5-rand);x(1:length(x)-1)]; #For gaussian noise
+  #x=[randn;x(1:length(x)-1)]; # For gaussian noise
+  err_energy=(1/n)*dot(e(length(e)-n+1:length(e)),e(length(e)-n+1:length(e)));
+  ye=w_s'*x(1:L); #Lets get the estimated value
+MidTerm659FelipeAlba
+i
+err_energy 
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+#Andres Felipe Alba Hernandez
+clc
+clear all
+close all
+#loading libraries 
+pkg load control
+pkg load signal
+#Loading the Data
+load TF.mat; #loas P_p, P_z,S_p,S_z Functions
+n_ref1=importdata('SEC13R.mat');
+n_ref2=importdata('SEC18R.mat');
+###Data loaded is:
+#S=S_z/S_p
+#S_z Coefficient of the numerator
+#S_p Coefficient of the denominator
+#P=P_z/P_p
+#P_z Coefficient of the numerator
+#P_p Coefficient of the denominator
+#Lets estimate S offline LMS
+i=1
+err_ye=2^16;
+abs_err=err_ye
+u=0.1;
+L=length(S_z);
+iter_filt=L*50;
+w_s=zeros(L,1);
+max_num_iterations=iter_filt-L+1;
+epsilon_err=1e-6;
+x=(0.5-rand(iter_filt,1)); #the vector of inputs white noise 
+#x=randn(200,1); #gaussian noise
+y=filter(S_z,S_p,x);
+n=25;
+err_ye(1:n)=1;
+err_energy=(1/n)*dot(err_ye(1:length(err_ye)),e(1:length(err_ye)));
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+i
+plot(err_ye)
+L
+x=0.01*(0.5-rand(iter_filt,1)); #the vector of inputs white noise 
+plot(x)
+MidTerm659FelipeAlba
+plot(err_ye)
+plot(err_ye(25:length(err_ye)))
+plot(y)
+MidTerm659FelipeAlba
+plot(err_ye)
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+length(y)
+MTPj659
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+i
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+test=x(1+i-1:L+i-1)
+lengh(test)
+length(test)
+exit
+# Octave 4.0.0, Fri Mar 16 00:46:53 2018 CDT <leasanspy@leasanspy-Inspiron-5521>
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+plot(err_ye)
+MidTerm659FelipeAlba
+disp("offline trainning")
+exit
+# Octave 4.0.0, Sat Mar 17 11:38:25 2018 CDT <leasanspy@leasanspy-Inspiron-5521>
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+L
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+i
+  e(j)=d(j)-y(j);
+j
+#Andres Felipe Alba Hernandez
+clc
+clear all
+close all
+###
+#Rutine Activations
+offline=false
+#loading libraries 
+pkg load control
+pkg load signal
+#Loading the Data
+load TF.mat; #loas P_p, P_z,S_p,S_z Functions
+n_ref1=importdata('SEC13R.mat');
+n_ref2=importdata('SEC18R.mat');
+###Data loaded is:
+#S=S_z/S_p
+#S_z Coefficient of the numerator
+#S_p Coefficient of the denominator
+#P=P_z/P_p
+#P_z Coefficient of the numerator
+#P_p Coefficient of the denominator
+#Lets estimate S offline LMS
+i=1
+u=0.001;
+L=length(S_z);
+iter_filt=L*50000;
+s_e=zeros(L,1);
+max_num_iterations=iter_filt;
+epsilon_err=1e-6;
+x=0.5-rand(iter_filt,1); #the vector of inputs white noise 
+#x=randn(200,1); #gaussian noise
+y=filter(S_z,S_p,x);
+xbuffer=zeros(L,1);
+n=25;
+err_ye(1:n)=1;
+err_energy=(1/n)*dot(err_ye(1:length(err_ye)),err_ye(1:length(err_ye)))
+ej=0;
+if offline
+  #First training
+  while(err_energy>epsilon_err && i!=max_num_iterations)
+  #while(abs_err>epsilon_err)
+    ej=ej+1;
+    ye=s_e'*xbuffer; #Lets get the estimated value
+    #test(i)=y
+    #test_e(i)=ye;
+    err_ye(i)=y(i)-ye;
+    s_e=s_e+u*xbuffer*err_ye(i); #update w 
+    xbuffer=[x(i);xbuffer(1:length(xbuffer)-1)];
+    i=i+1;
+    #x=[(0.5-rand);x(1:length(x)-1)]; #For gaussian noise
+    #x=[randn;x(1:length(x)-1)]; # For gaussian noise
+    if ej==n
+      err_energy=(1/n)*dot(err_ye(length(err_ye)-n+1:length(err_ye)),err_ye(length(err_ye)-n+1:length(err_ye)));
+      ej=0;
+    endif
+  endwhile
+  plot(err_ye)
+else
+    disp("no offline training")
+endif
+##
+#Second Training
+d=filter(P_z,P_p,n_ref1);
+noise_s=filter(S_z,S_p,n_ref1);
+#noise_s_e=filter(s_e,1,n_ref1);
+n_buffer=zeros(L,1);
+n_buffer_s=zeros(L,1);
+w=zeros(L,1);
+m_u=0.001;
+max_iter_online=1000;
+j
+j
+i
+MidTerm659FelipeAlba
+k
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+k
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+d(2)
+y(2)
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+plot(e)
+MidTerm659FelipeAlba
+plot(n_ref1)
+MidTerm659FelipeAlba
+i
+j
+k
+plot(e)
+plot(e(1:10))
+plot(w)
+plot(P)
+exit
+# Octave 4.0.0, Sat Mar 17 22:21:03 2018 CDT <leasanspy@leasanspy-Inspiron-5521>
+[1 0 1;-2 -2 -4;8 10 14]
+det(ans)
+exit
+# Octave 4.0.0, Sun Mar 18 12:54:58 2018 CDT <leasanspy@leasanspy-Inspiron-5521>
+#2b)
+Qiocf=[2 1;1 0]
+Q=[1 2;-6 -3]
+#2b)
+Qiocf=[2 1;1 0]
+Q=[1 2;-6 -3]
+Tocf=inv(Qiocf*Q)
+Tocf*9
+Aocf=inv(Tocf)*A/Tocf
+Homework3_ControlSysII
+Homework3_ControlSysII
+A
+Homework3_ControlSysII
+Homework3_ControlSysII
+Homework3_ControlSysII
+Homework3_ControlSysII
+Homework3_ControlSysII
+obsv(A,C)
+Homework3_ControlSysII
+chpol(3)
+HW2_CSII
+p
+p(3)
+Homework3_ControlSysII
+Homework3_ControlSysII
+Homework3_ControlSysII
+Homework3_ControlSysII
+inv(Qocf_inv)
+exit
+# Octave 4.0.0, Sun Mar 18 16:28:11 2018 CDT <leasanspy@leasanspy-Inspiron-5521>
+Homework3_ControlSysII
+Homework3_ControlSysII
+MidTerm659FelipeAlba
+plot(err_ye)
+plot(e)
+plot(e(1:10))
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+plot(err_ye(1000:1100))
+plot(err_ye)
+plot(err_ye(400000:400100))
+A=[1 2 3 4]
+circshift(A)
+circshift(A,1)
+circshift(A,2)
+circshift(A,3)
+circshift(A,B)
+B=[7 8]
+circshift(A,B)
+exit
+# Octave 4.0.0, Mon Mar 19 18:19:31 2018 CDT <leasanspy@leasanspy-Inspiron-5521>
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+plot(ye)
+plot(err_ye)
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+clear all
+load offline_train 
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+k
+noise_s_e(k)
+noise_s_e(k)
+noise_s_e(k)
+MidTerm659FelipeAlba
+    n_buffer_s_e=[noise_s_e(k);n_buffer_s_e(1:length(n_buffer_s_e)-1)];
+MidTerm659FelipeAlba
+plot(e)
+plot(e(1:10))
+plot(e(1:20))
+plot(e(1:22))
+plot(e(1:40))
+exit
+# Octave 4.0.0, Tue Mar 20 00:19:13 2018 CDT <leasanspy@leasanspy-Inspiron-5521>
+MidTerm659FelipeAlba
+e(length(e))
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+e(length(e))
+plot(e)
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+plot(e)
+MidTerm659FelipeAlba
+plot(n_ref)
+plot(n_ref1)
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+plot(e)
+plot(w)
+plot(s_e)
+MidTerm659FelipeAlba
+plot(e)
+plot(e(1:100))
+plot(e(length(e)-3000:length(e)-2000)
+plot(e(length(e)-3000:length(e)-2000))
+plot(e(length(e)-3000:length(e)-2000)))
+plot(e(length(e)-3000:length(e)-2000))
+plot(e(length(e)-4000:length(e)-3000))
+plot(e(length(e)-5000:length(e)-4000))
+plot(e)
+plot(e(8000:9000))
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+plot(e)
+MidTerm659FelipeAlba
+plot(e)
+MidTerm659FelipeAlba
+plot(e)
+MidTerm659FelipeAlba
+plot(e)
+MidTerm659FelipeAlba
+plot(e)
+MidTerm659FelipeAlba
+plot(e)
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+plot(e)
+plot(e)
+plot(n_ref1)
+plot(w)
+MidTerm659FelipeAlba
+plot(w)
+plot(s_e)
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+plot(e)
+MidTerm659FelipeAlba
+MidTerm659FelipeAlba
+plot(length(e)-200:length(e))
+plot(e(length(e)-200:length(e)))
+clear all
+clc
+f=linspace(-1,2/512,1-2/512);
+length(f(
+length(f)
+f=linspace(-1,2/512,1-2/512);
+f=linspace((-1/2)+(1/128),(1/2)-(1/128),128);
+f=linspace(-1,1-2/512,512);
+f=linspace(-1,1-2/512,512);
+clc
+clear all
+T=1;
+alpha=1/8;
+t=linspace(-8,8,32);
+f=linspace((-1/2)+(1/128),(1/2)-(1/128),128);
+f=linspace(-1,1-1/512,512);
+Rc=(sin(pi*t/T)/(pi*t/T))*(Cos(alpha*pi*t)/(1-(4*alpha^2*t^2)/T^2));
+exit
+# Octave 4.0.0, Tue Mar 20 15:28:21 2018 CDT <leasanspy@leasanspy-Inspiron-5521>
+MidTerm659FelipeAlba
+title("error: d[n]-y_out[n]")
+plot(e(10000:10100))
+MidTerm659FelipeAlba
+figure;plot(err_ye(480000:480100))
+plot(s_e)
+e(length(e)-100:length(e))
+plot(e(length(e)-100:length(e)))
+plot(e(length(e)-1000:length(e)))
+plot(e(length(e)-100000:length(e)))
+plot(w)
+MidTerm659FelipeAlba
+plot(e(length(e)-100000:length(e)))
+plot(e(length(e)-100000:length(e)))
+plot(w)
+exit
+# Octave 4.0.0, Thu Mar 22 00:22:53 2018 CDT <leasanspy@leasanspy-Inspiron-5521>
+MidTerm659FelipeAlba
