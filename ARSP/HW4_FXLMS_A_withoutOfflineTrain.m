@@ -26,15 +26,13 @@ sysS=filt(S_z,S_p);
 Pimp=impulse(sysP); #impulse response of P
 #}
 
-L=500;
-s_e=zeros(L,1);
-
 ###
 #Inputs (noise for example)
   #n_ref=wn; #Input online train training white noise
   #n_ref=n_ref1; #Input online train training noise amplitud 8000 peak to peak SEC13R
   n_ref=n_ref2; #Input online train training noise amplitud 3000 peak to peak SEC18R
   #n_ref_filt=conv(n_ref,LPF);
+
 
 disp("we load S from the workspace");
 load offline_train
