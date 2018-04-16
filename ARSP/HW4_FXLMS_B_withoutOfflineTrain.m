@@ -32,7 +32,7 @@ disp("this is FxMLS with feedback and only delay")
     #n_ref_filt=conv(n_ref,LPF);
 
 #Filter the input
-  filter_noise=LPF(1,:); #The first row is the LPF with better Q
+  filter_noise=LPF(19,:); #The first row is the LPF with better Q
   nf=conv(n_ref,filter_noise); #Input noise filter = color noise
 
 #Set Paramaters of the filter and LMS (Least Mean Square)
@@ -87,3 +87,74 @@ plot(time,n_ref(1:length(e)));
 title("Noise Input")
 xlabel ("discrete time [n]");
 ylabel ("e[n]")
+
+figure;
+time=[1:length(e)];
+subplot(2,1,1);
+plot(e(length(e)-1000:length(e)));
+title("Noise Output last 1000")
+xlabel ("discrete time [n]");
+ylabel ("e[n]")
+subplot(2,1,2);
+plot(n_ref(length(n_ref)-1000:length(n_ref)));
+title("Noise Input last 1000")
+xlabel ("discrete time [n]");
+ylabel ("nref[n]")
+
+#{
+
+plot_filters='True'
+if plot_filters
+
+f=LPF(1,:);
+subplot(6,1,1);
+plot(fftshift(abs(fft(f))))
+
+
+f=LPF(3,:);
+subplot(6,1,2);
+plot(fftshift(abs(fft(f))))
+
+
+
+f=LPF(6,:);
+subplot(6,1,3);
+plot(fftshift(abs(fft(f))))
+
+
+
+f=LPF(12,:);
+subplot(6,1,4);
+plot(fftshift(abs(fft(f))))
+
+
+
+f=LPF(15,:);
+subplot(6,1,5);
+plot(fftshift(abs(fft(f))))
+
+
+
+f=LPF(19,:);
+subplot(19,1,6);
+plot(fftshift(abs(fft(f))))
+
+else
+disp("not plots")
+}#
+
+#{
+time=[1:length(e)];
+subplot(2,1,1);
+plot(time,e);
+title("Noise Output")
+xlabel ("discrete time [n]");
+ylabel ("e[n]")
+subplot(2,1,2);
+plot(time,n_ref(1:length(e)));
+title("Noise Input")
+xlabel ("discrete time [n]");
+ylabel ("e[n]")
+#}
+
+
