@@ -1,4 +1,4 @@
-#Homework 15 
+#Homework 15
 #Andres Felipe Alba Hernandez
 pkg load communications
 SN=[0:5:50];
