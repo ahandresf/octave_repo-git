@@ -11,7 +11,9 @@ clear all
 clc
 close all
 
-##Input generator: This just generate random binary numbers imaginary, eg. 1+j or -1-j4
+##Input generator: This just generate random binary numbers imaginary,
+## eg. 1+j or -1-j3
+## 3+3j or 1+1j
 counter=0
 while(counter!=64)
   if rand>0.5
@@ -41,6 +43,7 @@ while(counter!=64)
   counter=counter+1;
   In(counter,1)=a+b;
 endwhile
+####
 
 #h=rand(10,1);
 h=randn(10,1)+randn(10,1)*i; #Creating a random 10 tap channel real
@@ -56,8 +59,9 @@ for j=0:15
 endfor
 
 mod_In=ifft(In,64); 
+mod_cp=[mod_In(64-8:64);mod_In];### should I add something in the right
 S=conv(mod_In,h);   #64+10-1=73
-R=fft(S,64);
+R=fft(S,64); #what happend when I do 64 fft
 
 for j=0:15
   He(j+1,1)=R(j*4+1)/pilot(j+1);
