@@ -68,7 +68,7 @@ for k=1:max_iter_online
     nf_e=y_out+e(k);
     nf_e_buffer=[nf_e;nf_e_buffer(1:length(nf_e_buffer)-1)]; #moving one position all element and inserting one, size L
     nf_power=dot(nf_e_buffer,nf_e_buffer);
-    m_u=0.1/nf_power;
+    m_u=0.1/nf_power; ##max mu=2/(L_w*Px) where Px power of the input. 
 
     nf_z=dot(nf_e_buffer_z,z_filter_L); #Producing a sample filter by z
     nf_e_buffer_z=[nf_z;nf_e_buffer_z(1:length(nf_e_buffer_z)-1)]; #Moving the buffer for next iteration
