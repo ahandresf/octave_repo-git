@@ -3,6 +3,7 @@
 clear all
 clc
 close all
+
 ##Input vector
 bn=[-1 1 1 -1 1 -1 -1 1 -1 1 -1 1 -1 1 -1 -1 -1 -1 1 -1]';
 r(1)=bn(1)+0.1*randn;
@@ -26,54 +27,36 @@ r=r';
        1 1 1;] 
 
 #Starting first iteration for N=2.
-#n=3;
+n=3;
 function Jo=cost_ini(n)
   Jo=(r(n-2)-I(n-2))^2+(r(n-1)-I(n-1)-0.5*I(n-1))^2+(r(n)-I(n)-0.5*I(n-1)-0.4*I(n-2))^2;
 endfunction
 
-T_res=cost_ini(n);
+for i=1:length(T)
+  I=T(i,:);
+  alpha(i)=(r(n-2)-I(n-2))^2+(r(n-1)-I(n-1)-0.5*I(n-1))^2+(r(n)-I(n)-0.5*I(n-1)-0.4*I(n-2))^2;
+  #alpha(i)=cost_ini(3);
+endfor
 
-function Jc=mycost(n)
-  Jc=Jc(n-1)+(r(n)-I(n)-0.5*I(n-1)+0.4*I(n-2)+0.1*randn;
-endfunction
-
-for i=1:length(Table)
-  I
-
-J=mycost(5);
+if alpha(1)>alpha(5)
+  I_next(1,:)=T(5,:)
+  cost(1)=alpha(5)
+else
+  I_next(1)=T(1,:)
+  cost(1)=alpha(1)
+  
+if alpha(1)>alpha(5)
+  I_next(1,:)=T(5,:)
+  cost(1)=alpha(5)
+else
+  I_next(1)=T(1,:)
+  cost(1)=alpha(1)
+  
 
 
 
 #{
-I(n-2)=-1;
-I(n-1)=-1;
-I(n)=-1;
-
-I(n-2)=1;
-I(n-1)=-1;
-I(n)=-1;
-
-I(n-2)=-1;
-I(n-1)=1;
-I(n)=-1;
-
-I(n-2)=1;
-I(n-1)=1;
-I(n)=-1;
-
-I(n-2)=-1;
-I(n-1)=-1;
-I(n)=1;
-
-I(n-2)=1;
-I(n-1)=-1;
-I(n)=1;
-
-I(n-2)=-1;
-I(n-1)=1;
-I(n)=1;
-
-I(n-2)=1;
-I(n-1)=1;
-I(n)=1;
-#}
+ function Jc=mycost(n)
+  Jc=Jc(n-1)+(r(n)-I(n)-0.5*I(n-1)+0.4*I(n-2)+0.1*randn;
+endfunction
+}#

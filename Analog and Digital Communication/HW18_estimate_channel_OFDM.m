@@ -46,11 +46,14 @@ endwhile
 ####
 
 #h=rand(10,1);
-h=randn(10,1)+randn(10,1)*i; #Creating a random 10 tap channel real
+#h=randn(10,1)+randn(10,1)*i; #Creating a random 10 tap channel real
+h=[0.1+0.2i  0.2-0.1i 0.2+0.2i 03-0.1i 0.3-0.7i 0.4+0.6i 0.5-0.7i 0.2+0.5i 0.8+0.4i 0.5+0.5i]
 
-pil_s=[1.5-4i;-1.5+4i;-1.5+1.5i;1.5-1.5i];
-#pil_s=[1-3i;-1+3i;-1+i;1-i]; #Vector of pilots. pick always real different sign from imaginary
+
+#pil_s=[1.5-4i;-1.5+4i;-1.5+1.5i;1.5-1.5i];
+pil_s=[1-3i;-1+3i;-1+i;1-i]; #Vector of pilots. pick always real different sign from imaginary
 pilot=[pil_s;pil_s;pil_s;pil_s]; #16x1 of repetition
+#pilot=[0.1+0.2i  0.2-0.1i 0.2+0.2i 03-0.1i 0.3-0.7i 0.4+0.6i 0.5-0.7i 0.2+0.5i 0.8+0.4i 0.5+0.5i]
 
 #Inserting pilots in the In vector
 for j=0:15
@@ -72,7 +75,7 @@ he=ifft(He,16);
 disp("the channel is")
 h;
 disp("The estimated channes is")
-he;
+he(1:10);
 
 
 

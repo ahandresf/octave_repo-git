@@ -23,7 +23,7 @@ title("Results from linear convolution")
 #Question b is to circular convolution
 output_cconv=cconv(x_input,h_channel)
 subplot(3,1,2)
-plot(output_ifft,'g')
+plot(output_cconv,'g')
 title("Results from circular convolution")
 
 

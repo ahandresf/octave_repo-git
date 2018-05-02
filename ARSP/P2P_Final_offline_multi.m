@@ -65,7 +65,7 @@ while (power_err!=1e-5 && k!=10000)
   power_err=dot(err_buff,err_buff);
   power_xn=dot(x_in_buff_S,x_in_buff_S); #power of the input
   m_u=0.1*(2/L_w*power_xn); ##max mu=2/(L_w*Px) where Px power of the input.
-  S_e=S_e+m_u*x_in_buff*e(k);
+  S_e=S_e+m_u*x_in_buff_S*e(k);
   k=k+1;
 endwhile
 S_e22=S_e;
