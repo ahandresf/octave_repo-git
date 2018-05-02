@@ -51,7 +51,7 @@ k=1;
 S=TF_S22;
 L_s=length(S);
 x_in_buff=zeros(L_w,1);
-x_in_buff_S=zeros(length(S),1);
+x_in_buff_S=zeros(L_s,1);
 err_buff=ones(L_w,1);#buffer of error fill with ones, power = N^2
 power_err=dot(err_buff,err_buff);
 
@@ -65,7 +65,7 @@ while (power_err!=1e-5 && k!=10000)
   power_err=dot(err_buff,err_buff);
   power_xn=dot(x_in_buff_S,x_in_buff_S); #power of the input
   m_u=0.1*(2/L_w*power_xn); ##max mu=2/(L_w*Px) where Px power of the input.
-  S_e=S_e+m_u*x_in_buff_S*e(k);
+  S_e=S_e+m_u*x_in_buff*e(k);
   k=k+1;
 endwhile
 S_e22=S_e;
@@ -84,7 +84,7 @@ plot(S_e(1:800))
 title('S22e')
 
 
-save S22_e.mat S_e22
+save S22_ex.mat S_e22
 
 
 #Se=offline_train;
