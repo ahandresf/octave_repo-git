@@ -162,8 +162,8 @@ while (power_err1!=1e-5 && power_err2!=1e-5 && k!=1e4)
   power_2=dot(x_ref2_buff,x_ref2_buff); #power of the input
   %power_xn=(power_1+power_2)/2; #average of teh power of both input buffer
   %0.01
-  m_u1=0.01*(2/(L_w*power_1)); #this power is probably wrong, it should be the input filtered. 
-  m_u2=0.01*(2/(L_w*power_2));
+  m_u1=0.01*(2/L_w*power_1); #this power is probably wrong, it should be the input filtered. 
+  m_u2=0.01*(2/L_w*power_2); #the step need to be modify this formula is wrong. 
 
   %Update filters LMS using e1 and e2
   %W(ref,speaker)
